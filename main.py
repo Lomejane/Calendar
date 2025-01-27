@@ -3,8 +3,6 @@ def calendar(days_per_month, starting_date):
     print("Sun Mon Tue Wed Thu Fri Sat")
 
     print("    " * starting_date, end="")
-
-
     for day in range(1, days_per_month + 1):
         print(f"{day:2} ", end=" ") 
         # 
@@ -15,7 +13,7 @@ def main():
     # User Input (# of days adn starting date)
     try:
         days_per_month = int(input("How many days in this month (28-31): "))
-        starting_date = int(input("What is the starting day(1 = Sun, 6 = Sat): "))
+        starting_date = int(input("What is the starting day(0 = Sun, 6 = Sat): "))
     # Check user inputs
         if 28 <= days_per_month <= 31 and 0 <= starting_date <= 6:
             calendar(days_per_month, starting_date)
